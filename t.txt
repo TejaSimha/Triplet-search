@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+  int a[100],n,sum,i,count=0,j,k;
+  scanf("%d%d",&n,&sum);
+  for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+  
+  for(i=0;i<n;i++)
+  {
+    for(j=i+1;j<n;j++)
+    {
+      for(k=j+1;k<n;k++)
+      {
+        if(a[i]+a[j]+a[k]==sum)
+          count++;
+      }
+    }
+  }
+  printf("%d",count);
+  return 0;
+}
+  
